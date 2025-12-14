@@ -76,32 +76,28 @@ const toggleMenu = () => {
 
             <ul
               v-show="isMenuOpen"
-              class="absolute top-8 bg-white w-1/3 max-w-50 mt-3 text-[#432818] text-[10px] flex-col text-center rounded-sm z-10"
+              class="absolute top-8 right-4 bg-white w-1/3 max-w-50 mt-3 text-[#432818] text-[10px] flex-col text-center rounded-sm z-10"
             >
               <router-link to="/" @click="isMenuOpen">
-                <li
-                  class="hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
-                >
-                  Home
-                </li>
+                <li class="active:bg-[#995829] active:text-white cursor-pointer py-[4px]">Home</li>
               </router-link>
               <router-link to="/services">
                 <li
-                  class="hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
+                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
                 >
                   Services
                 </li></router-link
               >
               <router-link to="/contact"
                 ><li
-                  class="hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
+                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
                 >
                   Contact
                 </li></router-link
               >
               <router-link to="/faqs"
                 ><li
-                  class="hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
+                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
                 >
                   FAQs
                 </li></router-link
