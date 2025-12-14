@@ -99,7 +99,7 @@ const toggleMenu = () => {
           <!-- Homepage image -->
           <div class="absolute w-full md:w-1/2 top-3/5 md:top-10 md:-right-18">
             <img
-              src="\images\homepage-img1.jpeg"
+              src="\images\homepage-img1.jpg"
               alt=""
               class="rounded-lg md:rounded-[40px] h-67 md:h-140 w-9/10 md:w-full mx-auto md:mx-0"
             />
