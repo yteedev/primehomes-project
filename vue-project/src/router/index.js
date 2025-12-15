@@ -4,6 +4,9 @@ import Home from '@/pages/Home.vue'
 import Services from '@/pages/Services.vue'
 import Contact from '@/pages/Contact.vue'
 import FAQs from '@/pages/FAQs.vue'
+import Demo from '@/pages/Demo.vue'
+import TermsAndConditions from '@/pages/TermsAndConditions.vue'
+import CookiesPolicies from '@/pages/CookiesPolicies.vue'
 
 const routes = [
   {
@@ -25,6 +28,21 @@ const routes = [
     path: '/faqs',
     name: 'FAQs',
     component: FAQs,
+  },
+  {
+    path: '/demo',
+    name: 'Demo',
+    component: Demo,
+  },
+  {
+    path: '/termsAndConditions',
+    name: 'TermsAndConditions',
+    component: TermsAndConditions,
+  },
+  {
+    path: '/cookiesPolicies',
+    name: 'CookiesPolicies',
+    component: CookiesPolicies,
   },
 ]
 

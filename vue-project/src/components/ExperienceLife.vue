@@ -23,7 +23,7 @@ const addBgColour = (menuId) => {
     ></div>
     <!-- EXPERIENCE LIFE, POWERED BY Ai SECTION -->
     <div class="w-full md:mt-21 md:flex justify-center">
-      <div class="relative w-full md:max-w-310">
+      <div class="relative w-full">
         <!-- Brown background container -->
         <div
           class="relative bg-[#DBB68F] md:flex items-center md:text-left md:pl-16 w-full h-81 md:h-133 md:rounded-3xl"

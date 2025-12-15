@@ -3,6 +3,7 @@ import NavBar from '@/components/NavBar.vue'
 import ExperienceLife from '@/components/ExperienceLife.vue'
 import OurVision from '@/components/OurVision.vue'
 import FeaturedProjects from '@/components/FeaturedProjects.vue'
+import FooterSection from '@/components/FooterSection.vue'
 </script>
 <template>
   <div>
@@ -27,12 +28,14 @@ import FeaturedProjects from '@/components/FeaturedProjects.vue'
           efficiency.
         </p>
       </div>
+
       <!-- OUR VISION SECTION -->
-      <div>
-        <OurVision />
-      </div>
+      <OurVision />
+
       <!-- FEATURED PROJECTS SECTION -->
       <FeaturedProjects />
     </div>
+    <!-- FOOTER SECTION -->
+    <FooterSection />
   </div>
 </template>
