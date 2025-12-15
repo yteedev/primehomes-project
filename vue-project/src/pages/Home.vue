@@ -43,20 +43,25 @@ import OurVision from '@/components/OurVision.vue'
           and completed home transformations that reflect our commitment to intelligent, modern
           living.
         </p>
+
+        <!-- OVERLAY -->
         <div class="flex flex-col md:flex-row gap-8 md:gap-4 mt-9 md:mt-23">
+          <!-- OVERLAY IMG -->
           <div
             class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] group cursor-pointer"
           >
             <img
               src="/images/primevilla.jpg"
               alt=""
-              class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110"
+              class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110 group-active:scale-105"
             />
+
+            <!-- OVERLAY TEXT -->
             <div
-              class="absolute inset-0 group-hover:bg-linear-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-over: opacity-50 transition-all duration-500"
+              class="absolute inset-0 group-hover:bg-linear-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-hover: opacity-50 group-active: opacity-50 transition-all duration-500"
             ></div>
             <div
-              class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500"
             >
               <h class="text-white text-xl md:text-4xl font-bold">PrimeHOMES VILLAS</h>
               <p class="text-white text-[11px] md:text-lg font-normal mt-2 md:mt-4">
@@ -66,18 +71,20 @@ import OurVision from '@/components/OurVision.vue'
             </div>
           </div>
           <div
-            class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] group cursor-pointer border border-black"
+            class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] group cursor-pointer"
           >
             <img
               src="/images/garden of peace.jpg"
               alt=""
-              class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110"
+              class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110 group-active:scale-105"
             />
+
+            <!-- OVERLAY TEXT -->
             <div
-              class="absolute inset-0 group-hover:bg-linear-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-over: opacity-50 transition-all duration-500"
+              class="absolute inset-0 group-hover:bg-linear-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-hover: opacity-50 group-active: opacity-50 transition-all duration-500"
             ></div>
             <div
-              class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500"
             >
               <h class="text-white text-xl md:text-4xl font-bold">Garden of Peace</h>
               <p class="text-white text-[11px] md:text-lg font-normal mt-2 md:mt-4">
