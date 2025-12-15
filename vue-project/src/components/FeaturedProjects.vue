@@ -24,7 +24,7 @@ const toggleProject = (projectId) => {
       <!-- OVERLAY IMG -->
       <div
         @click="toggleProject(1)"
-        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] md:group md:cursor-pointer"
+        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] md:group cursor-pointer"
       >
         <img
           src="/images/primevilla.jpg"
@@ -35,7 +35,7 @@ const toggleProject = (projectId) => {
 
         <!-- OVERLAY TEXT -->
         <div
-          class="absolute inset-0 group-hover:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50 transition-all duration-500"
+          class="absolute inset-0 bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50 transition-all duration-500"
           :class="activeProject === 1 ? 'opacity-50' : 'opacity-0'"
         ></div>
         <div
@@ -49,21 +49,26 @@ const toggleProject = (projectId) => {
           </p>
         </div>
       </div>
+      <!-- OVERLAY IMG -->
       <div
-        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] group cursor-pointer"
+        @click="toggleProject(2)"
+        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] md:group cursor-pointer"
       >
         <img
           src="/images/garden of peace.jpg"
           alt=""
-          class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110 group-active:scale-105"
+          class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110"
+          :class="{ 'scale-105': activeProject === 2 }"
         />
 
         <!-- OVERLAY TEXT -->
         <div
-          class="absolute inset-0 group-active:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-hover:opacity-50 group-active:opacity-50 transition-all duration-500"
+          class="absolute inset-0 bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50 transition-all duration-500"
+          :class="activeProject === 2 ? 'opacity-50' : 'opacity-0'"
         ></div>
         <div
-          class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500"
+          class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500"
+          :class="activeProject === 2 ? 'opacity-100' : 'opacity-0'"
         >
           <h class="text-white text-xl md:text-4xl font-bold">Garden of Peace</h>
           <p class="text-white text-[11px] md:text-lg font-normal mt-2 md:mt-4">

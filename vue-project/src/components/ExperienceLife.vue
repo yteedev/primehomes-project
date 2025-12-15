@@ -7,6 +7,11 @@ const isMenuOpen = ref(false)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+
+const IsMenuActive = ref(null)
+const addBgColour = (menuId) => {
+  IsMenuActive.value = IsMenuActive.value === menuId ? null : menuId
+}
 </script>
 <template>
   <div>
@@ -45,9 +50,10 @@ const toggleMenu = () => {
               v-show="isMenuOpen"
               class="absolute top-8 right-4 bg-white w-1/3 max-w-50 mt-3 text-[#432818] text-[10px] flex-col text-center rounded-sm z-50"
             >
-              <router-link to="/" @click="toggleMenu">
+              <router-link to="/" @click="(toggleMenu, addBgColour(1))">
                 <li
-                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
+                  class="md:hover:text-white md:hover:bg-[#995829] md:hover:font-bold cursor-pointer py-[4px]"
+                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 1 }"
                 >
                   Home
                 </li>
