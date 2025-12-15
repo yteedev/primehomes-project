@@ -58,23 +58,26 @@ const addBgColour = (menuId) => {
                   Home
                 </li>
               </router-link>
-              <router-link to="/services" @click="toggleMenu">
+              <router-link to="/services" @click="(toggleMenu, addBgColour(2))">
                 <li
                   class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
+                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 2 }"
                 >
                   Services
                 </li></router-link
               >
-              <router-link to="/contact" @click="toggleMenu"
+              <router-link to="/contact" @click="(toggleMenu, addBgColour(3))"
                 ><li
                   class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
+                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 3 }"
                 >
                   Contact
                 </li></router-link
               >
-              <router-link to="/faqs" @click="toggleMenu"
+              <router-link to="/faqs" @click="(toggleMenu, addBgColour(4))"
                 ><li
                   class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
+                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 4 }"
                 >
                   FAQs
                 </li></router-link

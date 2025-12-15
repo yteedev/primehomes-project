@@ -24,25 +24,29 @@ const toggleProject = (projectId) => {
       <!-- OVERLAY IMG -->
       <div
         @click="toggleProject(1)"
-        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] md:group cursor-pointer"
+        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] group cursor-pointer"
       >
         <img
           src="/images/primevilla.jpg"
           alt=""
-          class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110"
+          class="w-full h-full md:object-cover transition-transform duration-500 md:group-hover:scale-110"
           :class="{ 'scale-105': activeProject === 1 }"
         />
 
         <!-- OVERLAY TEXT -->
         <div
-          class="absolute inset-0 bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50 transition-all duration-500"
-          :class="activeProject === 1 ? 'opacity-50' : 'opacity-0'"
+          class="absolute inset-0 md:group-hover:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50"
+          :class="
+            activeProject === 1
+              ? 'sm:max-md:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] sm:max-md:opacity-50'
+              : 'opacity-0'
+          "
         ></div>
         <div
-          class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500"
+          class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center px-6 md:px-10 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100"
           :class="activeProject === 1 ? 'opacity-100' : 'opacity-0'"
         >
-          <h class="text-white text-xl md:text-4xl font-bold">PrimeHOMES VILLAS</h>
+          <h1 class="text-white text-xl md:text-4xl font-bold">PrimeHOMES VILLAS</h1>
           <p class="text-white text-[11px] md:text-lg font-normal mt-2 md:mt-4">
             A live smart home build that reflects our end-to-end approach to crafting intelligent,
             seamlessly connected villa spaces designed for modern living.
@@ -52,25 +56,29 @@ const toggleProject = (projectId) => {
       <!-- OVERLAY IMG -->
       <div
         @click="toggleProject(2)"
-        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] md:group cursor-pointer"
+        class="relative w-full md:w-1/2 h-61 md:h-121 rounded-lg md:rounded-[20px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] group cursor-pointer"
       >
         <img
           src="/images/garden of peace.jpg"
           alt=""
-          class="w-full h-full md:object-cover transition-transform duration-500 group-hover:scale-110"
-          :class="{ 'scale-105': activeProject === 2 }"
+          class="w-full h-full md:object-cover transition-transform duration-500 md:group-hover:scale-110"
+          :class="{ 'scale-105': activeProject === 1 }"
         />
 
         <!-- OVERLAY TEXT -->
         <div
-          class="absolute inset-0 bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50 transition-all duration-500"
-          :class="activeProject === 2 ? 'opacity-50' : 'opacity-0'"
+          class="absolute inset-0 md:group-hover:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50"
+          :class="
+            activeProject === 2
+              ? 'sm:max-md:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] sm:max-md:opacity-50'
+              : 'opacity-0'
+          "
         ></div>
         <div
-          class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500"
+          class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center px-6 md:px-10 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100"
           :class="activeProject === 2 ? 'opacity-100' : 'opacity-0'"
         >
-          <h class="text-white text-xl md:text-4xl font-bold">Garden of Peace</h>
+          <h1 class="text-white text-xl md:text-4xl font-bold">Garden of Peace</h1>
           <p class="text-white text-[11px] md:text-lg font-normal mt-2 md:mt-4">
             A complete home upgrade where we transformed a traditional house into a fully automated
             space with intelligent control, enhanced security, and seamless comfort.
