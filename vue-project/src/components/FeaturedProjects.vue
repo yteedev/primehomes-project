@@ -38,7 +38,7 @@ const toggleProject = (projectId) => {
           class="absolute inset-0 md:group-hover:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50"
           :class="
             activeProject === 1
-              ? 'sm:max-md:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] sm:max-md:opacity-50'
+              ? 'bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] opacity-50 md:opacity-0'
               : 'opacity-0'
           "
         ></div>
@@ -70,7 +70,7 @@ const toggleProject = (projectId) => {
           class="absolute inset-0 md:group-hover:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] md:group-hover:opacity-50"
           :class="
             activeProject === 2
-              ? 'sm:max-md:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] sm:max-md:opacity-50'
+              ? 'bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] opacity-50 md:opacity-0'
               : 'opacity-0'
           "
         ></div>
