@@ -58,7 +58,7 @@ import OurVision from '@/components/OurVision.vue'
 
             <!-- OVERLAY TEXT -->
             <div
-              class="absolute inset-0 group-hover:bg-linear-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-hover: opacity-50 group-active: opacity-50 transition-all duration-500"
+              class="absolute inset-0 group-hover:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-active:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-hover: opacity-50 group-active:opacity-50 transition-all duration-500"
             ></div>
             <div
               class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500"
@@ -81,7 +81,7 @@ import OurVision from '@/components/OurVision.vue'
 
             <!-- OVERLAY TEXT -->
             <div
-              class="absolute inset-0 group-hover:bg-linear-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-hover: opacity-50 group-active: opacity-50 transition-all duration-500"
+              class="absolute inset-0 group-active:bg-gradient-to-b from-[#432818]/0 via-[#432818] to-[#FF6100] group-hover:opacity-50 group-active:opacity-50 transition-all duration-500"
             ></div>
             <div
               class="w-8/10 md:w-9/10 mx-auto absolute top-4/10 md:top-3/10 inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500"
