@@ -22,11 +22,11 @@ const addBgColour = (menuId) => {
       class="md:hidden fixed inset-0 bg-black/65 z-40 transition-opacity"
     ></div>
     <!-- EXPERIENCE LIFE, POWERED BY Ai SECTION -->
-    <div class="w-full md:mt-21 md:flex justify-center">
-      <div class="relative w-full">
+    <div class="relative">
+      <div>
         <!-- Brown background container -->
         <div
-          class="relative bg-[#DBB68F] md:flex items-center md:text-left md:pl-16 w-full h-81 md:h-133 md:rounded-3xl"
+          class="bg-[#DBB68F] md:flex items-center md:rounded-3xl w-full md:w-[95%] h-81 md:h-120 lg:h-133 text-center md:text-left"
         >
           <!-- DROP DOWN ICON (MOBILE ONLY)-->
           <div class="md:hidden pt-4 grid place-items-end mr-4">
@@ -85,34 +85,34 @@ const addBgColour = (menuId) => {
             </ul>
           </div>
           <!-- Text content - left side -->
-          <div
-            class="md:flex flex-col justify-center text-center md:text-left md:w-2/3 pt-3 md:pt-0 md:items-start"
-          >
-            <h1 class="text-[#432818] font-extrabold text-2xl md:text-7xl/19 leading-relaxed">
-              Experience Life<span class="md:hidden">,</span> Powered by Ai
+          <div class="md:ml-10 lg:ml-16 md:w-1/2">
+            <h1
+              class="pt-3 text-[#432818] font-extrabold text-2xl md:text-5xl/14 lg:text-7xl/19 leading-relaxed"
+            >
+              Experience Life<span class="md:hidden">,</span><br class="hidden md:block" />
+              Powered by Ai
             </h1>
-            <p class="mt-4 md:mt-4 text-[10px] md:text-base font-light md:font-normal">
-              Experience next-level living with fully integrated smart systems for
-              <br class="hidden md:block" />
-              lighting,
+            <p class="mt-4 text-[10px] md:text-sm lg:text-base font-light md:font-normal">
+              Experience next-level living with fully integrated smart systems for lighting,
               <br class="md:hidden" />
               security, climate, and entertainment.
             </p>
             <button
-              class="bg-black text-white px-3 md:px-8 md:py-4 py-2 rounded-sm md:rounded-lg text-[8px] md:text-base mt-3 md:mt-8 cursor-pointer md:w-auto"
+              class="bg-black text-white px-3 py-2 md:px-4 md:py-2 lg:px-8 lg:py-4 rounded-sm md:rounded-lg text-[8px] md:text-sm lg:text-base mt-3 md:mt-8 cursor-pointer md:w-auto"
             >
               Tap to feel the future
             </button>
           </div>
-
-          <!-- Homepage image -->
-          <div class="absolute w-full md:w-1/2 top-3/5 md:top-10 md:-right-18">
-            <img
-              src="\images\homepage-img1.jpg"
-              alt=""
-              class="rounded-lg md:rounded-[40px] h-67 md:h-140 w-9/10 md:w-full mx-auto md:mx-0"
-            />
-          </div>
+        </div>
+        <!-- Homepage image -->
+        <div
+          class="absolute w-full md:w-[50%] h-67 md:h-130 lg:h-139 top-3/5 md:top-10 md:right-0 md:w-80"
+        >
+          <img
+            src="\images\homepage-img1.jpg"
+            alt=""
+            class="rounded-lg md:rounded-[40px] h-full w-9/10 md:w-8/10 mx-auto md:mr-0"
+          />
         </div>
       </div>
     </div>
