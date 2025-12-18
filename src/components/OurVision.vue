@@ -41,8 +41,8 @@ const features = [
             class="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 xl:p-8 bg-white border-solid border-[0.5px] border-[#C5C2C2] shadow-[1px_1px_2px_0px_rgba(197,194,194,0.5)] md:shadow-[3px_3px_3px_0px_rgba(197,194,194,0.5)]"
           >
             <img
-              :src="`/icons/${index + 1}-icon.png`"
-              alt=""
+              :src="`public/icons/${index + 1}-icon.png`"
+              alt="feature"
               class="size-4 sm:size-8 md:size-11 xl:size-12"
             />
             <p
