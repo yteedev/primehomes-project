@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import SmartHomesRw from './SmartHomesRw.vue'
 import router from './router'
 import './assets/main.css'
 
-createApp(SmartHomesRw).use(router).mount('#app')
+const pinia = createPinia()
+
+createApp(SmartHomesRw).use(router).use(pinia).mount('#app')

@@ -1,6 +1,27 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { defineStore, storeToRefs } from 'pinia'
+import { useNavigationStore } from '@/stores/NavigationStore'
+
+const store = useNavigationStore()
+const { headerNavItems } = storeToRefs(store)
+
 const router = useRouter()
+
+const footerNavItems = [
+  {
+    item: 'Demo',
+    to: '/demo',
+  },
+  {
+    item: 'Terms and Conditions',
+    to: '/termsAndConditions',
+  },
+  {
+    item: 'Cookies Policies',
+    to: '/cookiesPolicies',
+  },
+]
 
 const year = new Date().getFullYear()
 </script>
@@ -29,26 +50,25 @@ const year = new Date().getFullYear()
         <div>
           <p class="text-xl xl:text-3xl font-medium">Quick Links</p>
           <ul
+            v-for="headerNavItem in headerNavItems"
+            :key="headerNavItem.item"
             class="flex flex-col gap-3 xl:gap-4 mt-4 text-white text-base xl:text-[22px] font-normal"
           >
-            <router-link to="/">
-              <li>Home</li>
+            <router-link :to="headerNavItem.to">
+              <li>{{ headerNavItem.item }}</li>
             </router-link>
-            <router-link to="/services"> <li>Services</li></router-link>
-            <router-link to="/contact"><li>Contact</li></router-link>
-            <router-link to="/faqs"><li>FAQs</li></router-link>
           </ul>
         </div>
         <div>
           <p class="text-xl xl:text-3xl font-medium">Support</p>
           <ul
+            v-for="footerNavItem in footerNavItems"
+            :key="footerNavItem.item"
             class="flex flex-col gap-3 xl:gap-4 mt-4 text-white text-base xl:text-[22px] font-normal"
           >
-            <router-link to="/demo">
-              <li>Demo</li>
+            <router-link :to="footerNavItem.to">
+              <li>{{ footerNavItem.item }}</li>
             </router-link>
-            <router-link to="/termsAndConditions"> <li>Terms and Conditions</li></router-link>
-            <router-link to="/cookiesPolicies"><li>Cookies Policies</li></router-link>
           </ul>
         </div>
       </div>

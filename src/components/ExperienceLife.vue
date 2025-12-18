@@ -1,16 +1,17 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { storeToRefs } from 'pinia'
+import { useNavigationStore } from '@/stores/NavigationStore'
+
 const router = useRouter()
+
+const store = useNavigationStore()
+const { headerNavItems } = storeToRefs(store)
 
 const isMenuOpen = ref(false)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
-}
-
-const IsMenuActive = ref(null)
-const addBgColour = (menuId) => {
-  IsMenuActive.value = IsMenuActive.value === menuId ? null : menuId
 }
 </script>
 <template>
@@ -45,44 +46,30 @@ const addBgColour = (menuId) => {
               @click="toggleMenu"
             />
             <!-- NAVIGATION LIST (MOBILE ONLY)-->
-
-            <ul
-              v-show="isMenuOpen"
+            <div
               class="overflow-hidden absolute top-8 right-4 bg-white w-1/3 max-w-50 mt-3 text-[#432818] text-[10px] flex-col text-center rounded-sm z-50"
             >
-              <router-link to="/" @click="(toggleMenu, addBgColour(1))">
-                <li
-                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px] rounded-t-sm"
-                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 1 }"
-                >
-                  Home
-                </li>
-              </router-link>
-              <router-link to="/services" @click="(toggleMenu, addBgColour(2))">
-                <li
-                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
-                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 2 }"
-                >
-                  Services
-                </li></router-link
+              <ul
+                v-for="(headerNavItem, index) in headerNavItems"
+                :key="headerNavItem.item"
+                v-show="isMenuOpen"
               >
-              <router-link to="/contact" @click="(toggleMenu, addBgColour(3))"
-                ><li
-                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px]"
-                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 3 }"
-                >
-                  Contact
-                </li></router-link
-              >
-              <router-link to="/faqs" @click="(toggleMenu, addBgColour(4))"
-                ><li
-                  class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px] rounded-b-sm"
-                  :class="{ 'bg-[#995829] font-bold text-white': IsMenuActive === 4 }"
-                >
-                  FAQs
-                </li></router-link
-              >
-            </ul>
+                <router-link :to="headerNavItem.to" @click="toggleMenu">
+                  <li
+                    class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px] transition-colors duration-150"
+                    :class="
+                      index === 0
+                        ? 'rounded-t-sm'
+                        : index === headerNavItems.length - 1
+                          ? 'rounded-b-sm'
+                          : ''
+                    "
+                  >
+                    {{ headerNavItem.item }}
+                  </li>
+                </router-link>
+              </ul>
+            </div>
           </div>
 
           <!-- Text content -->

@@ -1,6 +1,12 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { storeToRefs } from 'pinia'
+import { useNavigationStore } from '@/stores/NavigationStore'
+
 const router = useRouter()
+
+const store = useNavigationStore()
+const { headerNavItems } = storeToRefs(store)
 </script>
 <template>
   <div class="relative">
@@ -13,57 +19,22 @@ const router = useRouter()
         <img src="/images/smarthomes-logo-coffee.png" alt="" class="w-full" />
       </div>
       <!-- NAVIGATION BAR (DESKTOP ONLY) -->
-
-      <ul class="flex flex-row gap-10">
-        <router-link to="/" v-slot="{ isActive }">
-          <li
-            class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer"
-            :class="
-              isActive
-                ? 'uppercase font-extrabold text-[#995829]'
-                : 'text-base font-normal text-[#000000]'
-            "
-          >
-            Home
-          </li>
-        </router-link>
-        <router-link to="/services" v-slot="{ isActive }">
-          <li
-            class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer"
-            :class="
-              isActive
-                ? 'uppercase font-extrabold text-[#995829]'
-                : 'text-base font-normal text-[#000000]'
-            "
-          >
-            Services
-          </li></router-link
-        >
-        <router-link to="/contact" v-slot="{ isActive }"
-          ><li
-            class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer"
-            :class="
-              isActive
-                ? 'uppercase font-extrabold text-[#995829]'
-                : 'text-base font-normal text-[#000000]'
-            "
-          >
-            Contact
-          </li></router-link
-        >
-        <router-link to="/faqs" v-slot="{ isActive }"
-          ><li
-            class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer"
-            :class="
-              isActive
-                ? 'uppercase font-extrabold text-[#995829]'
-                : 'text-base font-normal text-[#000000]'
-            "
-          >
-            FAQs
-          </li></router-link
-        >
-      </ul>
+      <div class="flex flex-row gap-10">
+        <ul v-for="headerNavItem in headerNavItems" :key="headerNavItem.item">
+          <router-link :to="headerNavItem.to" v-slot="{ isActive }">
+            <li
+              class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer transition-colors duration-150"
+              :class="
+                isActive
+                  ? 'uppercase font-extrabold text-[#995829]'
+                  : 'text-base font-normal text-[#000000]'
+              "
+            >
+              {{ headerNavItem.item }}
+            </li>
+          </router-link>
+        </ul>
+      </div>
     </nav>
   </div>
 </template>
