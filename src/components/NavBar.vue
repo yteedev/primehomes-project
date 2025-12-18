@@ -6,11 +6,11 @@ const router = useRouter()
   <div class="relative">
     <!-- NAV BAR -->
     <nav
-      class="hidden md:flex flex-row justify-between items-center fixed top-0 right-0 left-0 bg-white h-24 px-12 lg:px-25 shadow-[0_0.5px_10px_0px_rgba(0,0,0,0.18)] z-50"
+      class="hidden md:flex flex-row justify-between items-center fixed top-0 right-0 left-0 bg-white h-24 px-12 xl:px-25 shadow-[0_0.5px_10px_0px_rgba(0,0,0,0.18)] z-50"
     >
       <!-- SMARTHOMES LOGO -->
       <div class="w-33 h-14">
-        <img src="/images/smarthomes logo coffee.png" alt="" class="w-full" />
+        <img src="/images/smarthomes-logo-coffee.png" alt="" class="w-full" />
       </div>
       <!-- NAVIGATION BAR (DESKTOP ONLY) -->
 
@@ -27,7 +27,7 @@ const router = useRouter()
             Home
           </li>
         </router-link>
-        <router-link to="/services">
+        <router-link to="/services" v-slot="{ isActive }">
           <li
             class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer"
             :class="
@@ -39,7 +39,7 @@ const router = useRouter()
             Services
           </li></router-link
         >
-        <router-link to="/contact"
+        <router-link to="/contact" v-slot="{ isActive }"
           ><li
             class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer"
             :class="
@@ -51,7 +51,7 @@ const router = useRouter()
             Contact
           </li></router-link
         >
-        <router-link to="/faqs"
+        <router-link to="/faqs" v-slot="{ isActive }"
           ><li
             class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer"
             :class="
