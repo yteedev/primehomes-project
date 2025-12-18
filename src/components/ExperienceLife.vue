@@ -56,14 +56,20 @@ const toggleMenu = () => {
               >
                 <router-link :to="headerNavItem.to" @click="toggleMenu">
                   <li
-                    class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px] transition-colors duration-150 [webkit-tap-highlight-color:transparent]"
-                    :class="
+                    @touchstart="activeIndex = index"
+                    @touchend="((activeIndex = null), toggleMenu())"
+                    @click="toggleMenu"
+                    class="cursor-pointer py-[4px] transition-all duration-150 [webkit-tap-highlight-color:transparent]"
+                    :class="[
+                      activeIndex === index
+                        ? 'bg-[#995829] text-white font-bold'
+                        : 'hover:text-white hover:bg-[#995829] hover:font-bold',
                       index === 0
                         ? 'rounded-t-sm'
                         : index === headerNavItems.length - 1
                           ? 'rounded-b-sm'
-                          : ''
-                    "
+                          : '',
+                    ]"
                   >
                     {{ headerNavItem.item }}
                   </li>
