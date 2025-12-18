@@ -56,7 +56,7 @@ const toggleMenu = () => {
               >
                 <router-link :to="headerNavItem.to" @click="toggleMenu">
                   <li
-                    class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px] transition-colors duration-150"
+                    class="active:bg-[#995829] active:text-white hover:text-white hover:bg-[#995829] hover:font-bold cursor-pointer py-[4px] transition-colors duration-150 [webkit-tap-highlight-color:transparent]"
                     :class="
                       index === 0
                         ? 'rounded-t-sm'
