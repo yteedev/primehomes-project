@@ -32,7 +32,11 @@ const year = new Date().getFullYear()
   >
     <div class="flex flex-row justify-between pb-8">
       <div class="w-1/3">
-        <img src="/images/smarthomes logo white.png" alt="" class="w-30 xl:w-38 h-12 xl:h-14" />
+        <img
+          src="/images/smarthomes logo white.png"
+          alt=""
+          class="md:w-40 xl:w-45.5 md-40 md:h-10 xl:h-13.75"
+        />
         <div class="text-justify">
           <p class="text-base/7 xl:text-xl/7 font-ligh mt-6 xl:mt-8">
             Transforming homes across Rwanda with modern automation, smart security, and connected
