@@ -20,20 +20,25 @@ const { headerNavItems } = storeToRefs(store)
       </div>
       <!-- NAVIGATION BAR (DESKTOP ONLY) -->
       <div class="flex flex-row gap-10">
-        <ul v-for="headerNavItem in headerNavItems" :key="headerNavItem.item">
+        <div v-for="headerNavItem in headerNavItems" :key="headerNavItem.item">
           <router-link :to="headerNavItem.to" v-slot="{ isActive }">
-            <li
-              class="hover:uppercase hover:text-[#995829] hover:font-extrabold cursor-pointer transition-colors duration-150"
-              :class="
-                isActive
-                  ? 'uppercase font-extrabold text-[#995829]'
-                  : 'text-base font-normal text-[#000000]'
-              "
+            <span class="inline-grid">
+              <span class="invisible col-start-1 row-start-1 font-bold scale-105">
+                {{ headerNavItem.item }}
+              </span>
+              <span
+                class="col-start-1 row-start-1 hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out"
+                :class="
+                  isActive
+                    ? 'uppercase font-extrabold text-[#995829]'
+                    : 'text-base font-normal text-[#000000] hover:font-bold'
+                "
+              >
+                {{ headerNavItem.item }}
+              </span></span
             >
-              {{ headerNavItem.item }}
-            </li>
           </router-link>
-        </ul>
+        </div>
       </div>
     </nav>
   </div>
